@@ -23,7 +23,7 @@
 #define LGE_PERSISTENT_RAM_SIZE  (SZ_1M)
 #endif
 
-#ifdef CONFIG_ANDROID_RAM_CONSOLE
+#if defined CONFIG_ANDROID_RAM_CONSOLE || CONFIG_ANDROID_NEW_RAM_CONSOLE
 #define LGE_RAM_CONSOLE_SIZE	(124*SZ_1K * 2)
 #endif
 
@@ -164,7 +164,7 @@ enum lge_boot_cable_type {
 
 
 
-#ifdef CONFIG_ANDROID_RAM_CONSOLE
+#ifdef CONFIG_ANDROID_RAM_CONSOLE || CONFIG_ANDROID_NEW_RAM_CONSOLE
 void __init lge_add_ramconsole_devices(void);
 #else
 static inline void __init lge_add_ramconsole_devices(void)

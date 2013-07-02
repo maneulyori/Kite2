@@ -428,7 +428,7 @@ void __init lge_add_persistent_ram(void)
 }
 #endif
 
-#ifdef CONFIG_ANDROID_RAM_CONSOLE
+#ifdef CONFIG_ANDROID_RAM_CONSOLE || CONFIG_ANDROID_NEW_RAM_CONSOLE
 static struct platform_device ram_console_device = {
   	.name = "ram_console",
   	.id = -1,
